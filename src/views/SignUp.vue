@@ -16,9 +16,36 @@
 
 <script>
 import HeaderAuth from "../components/HeaderAuth";
+import axios from "axios";
 export default {
+  data() {
+    return {
+      name: "",
+      profile: "",
+      email: "",
+      password: ""
+    };
+  },
   components: {
     HeaderAuth
+  },
+  methods: {
+    auth() {
+      axios
+      .post("https://git.heroku.com/frozen-ridge-61955.git/api/register", {
+        name: this.name,
+        profile: this.profile,
+        emai: this.email,
+        password: this.password
+      })
+      .then(response => {
+        console.lod(response);
+        this.$router.replace("/");
+      })
+      .catch(error => {
+        alert(error);
+      });
+    }
   }
 };
 </script>

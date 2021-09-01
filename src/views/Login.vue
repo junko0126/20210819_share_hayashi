@@ -21,7 +21,7 @@ export default {
       password: ""
     };
   },
-  cpmponents: {
+  components: {
     HeaderAuth
   },
   methods: {

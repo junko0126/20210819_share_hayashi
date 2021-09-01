@@ -7,19 +7,20 @@
           <img class="icon" src="../assets/heart.png" @click="fav(index)" alt />
           <p class="number">{{ value.like.length }}</p>
           <img 
-          class="icon"
-          src="../assets/cross.png"
-          @click="del(index)"
-          alt
-          v-if="path && profile"
+            class="icon"
+            src="../assets/cross.png"
+            @click="del(index)"
+            alt
+            v-if="path && profile"
           />
-          <img class="icon
-          detail" src="../assets/detail.png"
-          @click="
-            $router.push({
-              path: '/detail/' + value.item.id,
-              params: { id: value.item.id },
-            })
+          <img 
+            class="icon detail"
+            src="../assets/detail.png"
+            @click="
+              $router.push({
+                path: '/detail/' + value.item.id,
+                params: { id: value.item.id },
+              })
           "
           alt
           v-if="profile"

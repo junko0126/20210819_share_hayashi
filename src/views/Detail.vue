@@ -97,6 +97,9 @@ export default {
   font-size: 20px;
   font-weight: bold;
 }
+.share-message {
+  border-bottom: 1px solid white;
+}
 .comment-title {
   text-align: center;
   padding-top: 10px;

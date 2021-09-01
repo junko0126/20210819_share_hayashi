@@ -22,7 +22,7 @@ export default {
         alert("シェアする内容を入力してください");
       } else {
         axios
-          .post("herokuのURL/api/shares", {
+          .post("https://git.heroku.com/frozen-ridge-61955.git/api/shares", {
             user_id: this.$store.state.user.id,
             share: this.share,
           })

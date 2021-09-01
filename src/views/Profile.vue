@@ -38,7 +38,7 @@ export default {
     edit() {
       if (!this.active) {
         axios
-          .put("herokuのURL/api/user", {
+          .put("https://git.heroku.com/frozen-ridge-61955.git/api/user", {
             email: this.$store.state.user.email,
             profile: this.profile,
           })
